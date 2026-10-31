@@ -1,0 +1,53 @@
+---
+title: 'Night Shift'
+speed: 6
+bpm: 0x7d
+orderList:
+  - 0x00
+instruments:
+  - id: 0x01
+    source: 'st01'
+    name: 'ST-01/BassDrum3'
+    finetune: 0
+    volume: 0x2a
+  - id: 0x02
+    source: 'st01'
+    name: 'ST-01/Snare4'
+    finetune: 0
+    volume: 0x24
+  - id: 0x03
+    source: 'st01'
+    name: 'ST-01/HiHat1'
+    finetune: 0
+    volume: 0x12
+  - id: 0x04
+    source: 'st01'
+    name: 'ST-01/DigDug'
+    finetune: 0
+    volume: 0x28
+    start: 0x0
+    length: 0x200
+  - id: 0x05
+    source: 'st01'
+    name: 'ST-01/Mechanic1'
+    finetune: 0
+    volume: 0x18
+  - id: 0x06
+    source: 'st01'
+    name: 'ST-01/MetalKeys'
+    finetune: 0
+    volume: 0x18
+    start: 0x0
+    length: 0x200
+  - id: 0x07
+    source: 'st01'
+    name: 'ST-01/SynClaves'
+    finetune: 0
+    volume: 0x1c
+  - id: 0x08
+    source: 'st02'
+    name: 'ST-02/Cowbell2'
+    finetune: 0
+    volume: 0x18
+...
+# vim: set filetype=yaml
