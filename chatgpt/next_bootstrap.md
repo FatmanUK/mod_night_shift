@@ -64,7 +64,7 @@ Output this step including the user's decision as a Markdown file named `step1.m
 
 Select eight samples from the ST-01 and ST-02 archives which will accomplish the goal and achieve the desired character for the `.mod`. State which samples are to be looped, if any. Forward loops are the only kind of loops allowed per **ProTracker 2** compatibility rules.
 
-Analyse the samples' envelopes and recommend default volume settings for each one. Note recorded peak and envelope behaviour. If you don't have access to the samples, report this lack and the user will upload the samples. Use previous knowledge and testing to determine exact loop points for looping, if needed.
+Analyse the samples' envelopes and recommend default volume settings for each one. Note recorded peak and envelope behaviour. If you don't have access to the samples, report this lack and the user will upload the samples. Use previous knowledge and testing to determine exact loop points for looping, if needed. For looping, choose points which cover a whole number of waveform cycles. Make sure the loop endpoint differentials match.
 
 Set finetune to zero, since these samples predate that setting.
 
@@ -112,17 +112,15 @@ Each instrument may have these members (only if looping):
 
 ## Compatibility Rules
 
-```text
-4 channels only
-ProTracker-compatible effects only
-No XM-only composition features
-No notes below C-3
-No notes above B-5
-Forward sample loops only
-No ping-pong loops
-Pattern reuse preferred
-Exact final runtime is unimportant
-```
+- 4 channels only
+- ProTracker-compatible effects only
+- No XM-only composition features
+- No notes below C-3
+- No notes above B-5
+- Forward sample loops only
+- No ping-pong loops
+- Pattern reuse preferred
+- Exact final runtime is unimportant
 
 Bonus points if the final `.mod` weighs in at less than 40KB.
 
@@ -130,14 +128,41 @@ Bonus points if the final `.mod` weighs in at less than 40KB.
 
 - Unless otherwise specified or required, output lone numbers in hex format (eg. "3f").
 - Explain effects the first time they're used.
-- Don't add speed and BPM in pattern00. That will be done later.
+- Don't add speed and BPM in pattern00. They will be added later by the compiler.
+- All unpitched percussion hits written as note `C-4`.
+
+### Composition Guidance
+
+Because this seems to keep happening whatever LLM I'm using.
+
+#### Enough with the energy resets
+
+'Energy reset' means any or all of the following terms: breakdown-and-rebuild, arrangement dropout, energy reset, fade-out-and-restart, fake crash, staged reboot transition.
+
+There are plenty of classic songs where this is used to great effect. It's not original any more and now it just sounds tired and cliche. To be more clear:
+
+* Do not default to an energy reset.
+
+* Do not progressively remove instruments into near-silence and then restart the groove with a drum fill, a sudden drop, or instruments re-entering one by one **unless this structure is explicitly requested**.
+
+* Transitions should normally preserve forward momentum. Create contrast through changes in melody, harmony, rhythm, register, orchestration, syncopation, or motif development rather than repeatedly collapsing the arrangement and restarting it.
+
+* A temporary reduction in texture is permitted, but it must not function as a full energy reset or make the following section sound like the song is starting again.
 
 ## Tools Used
 
 Testing Operating System: PikaOS
 Testing Tracker: MilkyTracker
 
+## Pattern Format
+
 The patterns will not be entered into MilkyTracker directly. Instead, I have written a compiler for the final `.mod`. The compiler requires pattern rows in a specific format, as follows:
 
 `| RR | NNN II EEE | NNN II EEE | NNN II EEE | NNN II EEE |`
-where RR is the row number, NNN is the note, II is the instrument slot and EEE is the effect. The row format is compatible with Markdown tables, so each pattern should have a Markdown table header.
+where RR is the row number, NNN is the note, II is the instrument slot and EEE is the effect.
+
+Row number must be in decimal, not hex. This is due to a bug in the compiler.
+
+The row format is compatible with Markdown tables, so each pattern should have a Markdown table header. Headers should be 'Row', 'Ch1', 'Ch2', 'Ch3' and 'Ch4'. Add padding to the headers to match the rows.
+
+Write no note as '---'. Write no instrument as '--'. Write no effect as '---'. Omit entirely empty lines.
