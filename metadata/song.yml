@@ -25,20 +25,24 @@ instruments:
     name: 'ST-01/DigDug'
     finetune: 0
     volume: 0x28
-    start: 0x0
-    length: 0x200
+    start: 0x0914
+    length: 0x0204
   - id: 0x05
     source: 'st01'
-    name: 'ST-01/Mechanic1'
+    name: 'ST-01/Strings7'
     finetune: 0
     volume: 0x18
+    start: 0x1e00
+    length: 0x0200
   - id: 0x06
     source: 'st01'
     name: 'ST-01/MetalKeys'
     finetune: 0
-    volume: 0x18
-    start: 0x0
-    length: 0x200
+    volume: 0x10
+    start: 0x10ac
+    length: 0x0100
+    #start: 0x0dcd
+    #length: 0x1326
   - id: 0x07
     source: 'st01'
     name: 'ST-01/SynClaves'
