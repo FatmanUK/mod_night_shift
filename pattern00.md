@@ -21,9 +21,8 @@ This has promise, but:
 
 Here’s the revised Pattern 00. DigDug starts in Ch2 at row 00, the pad starts in Ch4, and the drum accents share more of the opening. Ch3 keeps the signal phrase, with an arpeggio and brief vibrato to try.
 
-```markdown
-| RR | Channel 1 | Channel 2 | Channel 3 | Channel 4 |
-|---:|---|---|---|---|
+| RR | Channel 1  | Channel 2  | Channel 3  | Channel 4  |
+|---:|------------|------------|------------|------------|
 | 00 | C-4 01 F06 | D-4 04 --- | --- -- --- | D-3 05 --- |
 | 01 | --- -- F7D | --- -- --- | --- -- --- | --- -- --- |
 | 04 | C-4 03 --- | --- -- --- | --- -- --- | --- -- --- |
@@ -41,7 +40,6 @@ Here’s the revised Pattern 00. DigDug starts in Ch2 at row 00, the pad starts 
 | 52 | C-4 07 --- | --- -- --- | --- -- --- | --- -- --- |
 | 56 | C-4 03 --- | --- -- --- | --- -- --- | --- -- --- |
 | 60 | C-4 01 --- | D-4 04 --- | --- -- --- | --- -- --- |
-```
 
 **F06** sets speed 6; **F7D** sets tempo 125 BPM on the following row. **037** arpeggiates the Ch3 note through the root, minor third, and fifth. **447** adds vibrato with speed 4 and depth 7.
 
