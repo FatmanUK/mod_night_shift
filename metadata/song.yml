@@ -22,11 +22,11 @@ instruments:
     volume: 0x12
   - id: 0x04
     source: 'st01'
-    name: 'ST-01/DigDug'
+    name: 'ST-01/RubberBass'
     finetune: 0
     volume: 0x28
-    start: 0x0914
-    length: 0x0204
+    start: 0x1306
+    length: 0x0400
   - id: 0x05
     source: 'st01'
     name: 'ST-01/Strings7'
@@ -36,13 +36,9 @@ instruments:
     length: 0x0200
   - id: 0x06
     source: 'st01'
-    name: 'ST-01/MetalKeys'
+    name: 'ST-01/Koto'
     finetune: 0
-    volume: 0x10
-    start: 0x10ac
-    length: 0x0100
-    #start: 0x0dcd
-    #length: 0x1326
+    volume: 0x16
   - id: 0x07
     source: 'st01'
     name: 'ST-01/SynClaves'
