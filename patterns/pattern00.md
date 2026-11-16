@@ -1,6 +1,6 @@
-## Pattern 00
+## Pattern00 — Switch-on
 
-**Pattern 00 — Switch-on.** I’ve set a provisional D-minor center. It introduces the mechanical texture, gives the metallic signal twice, and hints at the bass motif near the end. The kick and accents stay sparse.
+I’ve set a provisional D-minor center. It introduces the mechanical texture, gives the metallic signal twice, and hints at the bass motif near the end. The kick and accents stay sparse.
 
 At row 00, **F06** sets speed 6 and **F7D** sets tempo 125 BPM. The pattern is drafted; it hasn’t been compiled or individually auditioned yet.
 
